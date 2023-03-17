@@ -1,13 +1,13 @@
-import 'package:dating_ui_challenge/foundations/sizes.dart';
 import 'package:flutter/material.dart';
 
+import 'package:dating_ui_challenge/foundations/sizes.dart';
 import 'package:dating_ui_challenge/foundations/colors.dart';
 import 'package:dating_ui_challenge/foundations/spacing.dart';
 
-class MatchPercentageCard extends StatelessWidget {
+class MatchPercentage extends StatelessWidget {
   final int matchPercentage;
 
-  const MatchPercentageCard({Key? key, required this.matchPercentage})
+  const MatchPercentage({Key? key, required this.matchPercentage})
       : super(key: key);
 
   @override
@@ -16,7 +16,8 @@ class MatchPercentageCard extends StatelessWidget {
       width: DatingSizes.percentageCardSize,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(DatingSpaces.borderPercentageCard),
-          gradient: const LinearGradient(colors: [
+          gradient: const LinearGradient(
+              colors: [
         DatingColors.initialGradient,
         DatingColors.finalGradient
       ])),
