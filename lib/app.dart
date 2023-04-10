@@ -1,6 +1,6 @@
-import 'package:dating_ui_challenge/ui/molecules/explore_people_card.dart';
 import 'package:flutter/material.dart';
 
+import 'package:dating_ui_challenge/ui/organisms/info_match_card.dart';
 
 class DatingApp extends StatelessWidget {
   const DatingApp({super.key});
@@ -15,7 +15,7 @@ class DatingApp extends StatelessWidget {
       ),
       home: const Scaffold(
         body: Center(
-          child: ExplorePeopleCard(),
+          child: InfoMatchCard(),
         ),
       ),
     );

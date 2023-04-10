@@ -10,5 +10,7 @@ class TokenColors {
   static const Color darkBlue = Color.fromARGB(255, 80, 40, 215);
   static const Color darkIndigo = Color.fromARGB(255, 48, 35, 174);
   static const Color darkPurple = Color.fromARGB(255, 200, 109, 215);
+  static const Color yellow = Color.fromARGB(255, 200, 109, 215);
 
 }
+//background-image: linear-gradient(180deg, #FF8900 0%, #FFBA00 100%);

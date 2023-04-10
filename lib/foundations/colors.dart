@@ -9,4 +9,5 @@ class DatingColors {
   static const Color finalGradient = TokenColors.darkIndigo;
   static const Color colorOnSurface = TokenColors.whiteColor;
   static const Color colorOnLight = TokenColors.blackColor01;
+  static const Color colorGray = TokenColors.grayColor;
 }
