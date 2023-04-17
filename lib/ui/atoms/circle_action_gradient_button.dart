@@ -1,5 +1,6 @@
-import 'package:dating_ui_challenge/foundations/colors.dart';
 import 'package:flutter/material.dart';
+
+import 'package:dating_ui_challenge/ui/atoms/circle_shadowed.dart';
 
 class CircleButtonGradientProperties {
   final List<Color> colors;
@@ -28,15 +29,8 @@ class CircleActionGradientButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: DatingColors.colorOnSurface,
-          border: Border.all(color: DatingColors.colorGray.withAlpha(25)),
-          boxShadow: const [
-            BoxShadow(color: DatingColors.colorGray, blurRadius: 25)
-          ]),
-      child: ShaderMask(
+    return CircleShadowed(
+      children: ShaderMask(
         shaderCallback: (Rect bounds) {
           return LinearGradient(
                   colors: gradientProperties.colors,
