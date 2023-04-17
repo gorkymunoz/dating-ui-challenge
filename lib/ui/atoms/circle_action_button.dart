@@ -29,6 +29,7 @@ class CircleActionButton extends StatelessWidget {
         iconSize: iconSize,
         icon: Icon(icon),
         onPressed: onPressed,
+        color: iconColor,
       ),
     );
   }
