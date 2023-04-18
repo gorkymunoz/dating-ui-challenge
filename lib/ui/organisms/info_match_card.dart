@@ -1,9 +1,10 @@
 import 'dart:developer';
 
-import 'package:dating_ui_challenge/foundations/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_lorem/flutter_lorem.dart';
 
+import 'package:dating_ui_challenge/foundations/colors.dart';
+import 'package:dating_ui_challenge/ui/atoms/circle_action_gradient_button.dart';
 import 'package:dating_ui_challenge/ui/atoms/circle_action_button.dart';
 import 'package:dating_ui_challenge/foundations/spacing.dart';
 import 'package:dating_ui_challenge/ui/molecules/explore_people_card.dart';
@@ -34,45 +35,70 @@ class InfoMatchCard extends StatelessWidget {
                 const DatingSeparator(
                   nHeight: 0.15,
                 ),
-                Text(description, textAlign: TextAlign.center,),
+                Text(
+                  description,
+                  textAlign: TextAlign.center,
+                ),
                 const DatingSeparator(
                   nHeight: 0.35,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    CircleActionButton(
-                      iconSize: 14,
-                      icon: Icons.star,
-                      iconColor: DatingColors.finalGradient,
-                      onPressed: () {
-                        log('super like');
-                      },
+                    SizedBox(
+                      height: 42,
+                      child: CircleActionGradientButton(
+                        iconSize: 22,
+                        icon: Icons.star,
+                        gradientProperties: CircleButtonGradientProperties(
+                            colors: [
+                              DatingColors.likeIconInitialGradient,
+                              DatingColors.finalGradient
+                            ]),
+                        onPressed: () {
+                          log('super like');
+                        },
+                      ),
                     ),
-                    CircleActionButton(
-                      iconSize: 24,
-                      icon: Icons.favorite,
-                      iconColor: DatingColors.finalGradient,
-                      onPressed: () {
-                        log('like');
-                      },
+                    SizedBox(
+                      height: 72,
+                      child: CircleActionGradientButton(
+                        iconSize: 22,
+                        icon: Icons.favorite,
+                        gradientProperties: CircleButtonGradientProperties(
+                            colors: [
+                              DatingColors.likeIconInitialGradient,
+                              DatingColors.likeIconFinalGradient
+                            ],
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter),
+                        onPressed: () {
+                          log('like');
+                        },
+                      ),
                     ),
-                    CircleActionButton(
-                      iconSize: 24,
-                      icon: Icons.close,
-                      iconColor: DatingColors.colorOnLight,
-                      onPressed: () {
-                        log('no');
-                      },
+                    SizedBox(
+                      height: 72,
+                      child: CircleActionButton(
+                        iconSize: 28,
+                        icon: Icons.close_rounded,
+                        iconColor: DatingColors.colorOnLight,
+                        onPressed: () {
+                          log('no');
+                        },
+                      ),
                     ),
-                    CircleActionButton(
-                      iconSize: 14,
-                      icon: Icons.bolt,
-                      iconColor: DatingColors.colorOnLight,
-                      onPressed: () {
-                        log('boost');
-                      },
-                    )
+                    SizedBox(
+                      height: 42,
+                      child: CircleActionButton(
+                        iconSize: 22,
+                        icon: Icons.bolt,
+                        iconColor: DatingColors.colorOnLight,
+                        onPressed: () {
+                          log('boost');
+                        },
+                      ),
+                    ),
                   ],
                 )
               ],
