@@ -50,11 +50,11 @@ class InfoMatchCard extends StatelessWidget {
                       child: CircleActionGradientButton(
                         iconSize: 22,
                         icon: Icons.star,
-                        gradientProperties: CircleButtonGradientProperties(
-                            colors: [
-                              DatingColors.likeIconInitialGradient,
-                              DatingColors.finalGradient
-                            ]),
+                        gradientProperties:
+                            CircleButtonGradientProperties(colors: [
+                          DatingColors.superLikeIconInitialGradient,
+                          DatingColors.superLikeIconFinalGradient
+                        ]),
                         onPressed: () {
                           log('super like');
                         },
@@ -63,7 +63,7 @@ class InfoMatchCard extends StatelessWidget {
                     SizedBox(
                       height: 72,
                       child: CircleActionGradientButton(
-                        iconSize: 22,
+                        iconSize: 24,
                         icon: Icons.favorite,
                         gradientProperties: CircleButtonGradientProperties(
                             colors: [
@@ -79,10 +79,16 @@ class InfoMatchCard extends StatelessWidget {
                     ),
                     SizedBox(
                       height: 72,
-                      child: CircleActionButton(
+                      child: CircleActionGradientButton(
                         iconSize: 28,
                         icon: Icons.close_rounded,
-                        iconColor: DatingColors.colorOnLight,
+                        gradientProperties: CircleButtonGradientProperties(
+                            colors: [
+                              DatingColors.nextIconInitialGradient,
+                              DatingColors.nextIconFinalGradient
+                            ],
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter),
                         onPressed: () {
                           log('no');
                         },
@@ -93,7 +99,7 @@ class InfoMatchCard extends StatelessWidget {
                       child: CircleActionButton(
                         iconSize: 22,
                         icon: Icons.bolt,
-                        iconColor: DatingColors.colorOnLight,
+                        iconColor: DatingColors.boostIcon,
                         onPressed: () {
                           log('boost');
                         },
