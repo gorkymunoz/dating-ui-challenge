@@ -18,7 +18,7 @@ class MatchPercentage extends StatelessWidget {
         borderRadius: BorderRadius.circular(DatingSpaces.borderPercentageCard),
           gradient: const LinearGradient(
               colors: [
-        DatingColors.initialGradient,
+        DatingColors.likeIconInitialGradient,
         DatingColors.finalGradient
       ])),
       padding: const EdgeInsets.all(DatingSpaces.paddingXS),
