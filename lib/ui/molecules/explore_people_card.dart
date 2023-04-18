@@ -18,7 +18,7 @@ class ExplorePeopleCard extends StatelessWidget {
           child: const AssetDatingImage(
             path: 'assets/images/match_1.jpg',
             heightImage: 360,
-            widthImage: 320,
+            widthImage: 348,
           ),
         ),
         const Positioned(

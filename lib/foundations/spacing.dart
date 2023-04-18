@@ -7,4 +7,10 @@ class DatingSpaces {
   static const double paddingS = Spacing.spaceSL;
   static const double borderPercentageCard = Spacing.spaceLG;
   static const double borderMatchPhoto = Spacing.spaceSL;
+
+  //margin
+  static const double marginXS = Spacing.spaceSM;
+  static const double marginS = Spacing.spaceSL;
+  static const double marginXM = Spacing.spaceMD;
+
 }

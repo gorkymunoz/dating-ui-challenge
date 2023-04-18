@@ -17,8 +17,9 @@ class InfoMatchCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String description = lorem(paragraphs: 1, words: 8);
-    return SizedBox(
+    return Container(
       height: 650,
+      margin: const EdgeInsets.symmetric(horizontal: DatingSpaces.marginXM),
       child: Card(
         elevation: 20,
         child: Container(
