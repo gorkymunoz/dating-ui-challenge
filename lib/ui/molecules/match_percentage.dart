@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:dating_ui_challenge/foundations/sizes.dart';
-import 'package:dating_ui_challenge/foundations/colors.dart';
-import 'package:dating_ui_challenge/foundations/spacing.dart';
+import '../../foundations/foundations.dart';
 
 class MatchPercentage extends StatelessWidget {
   final int matchPercentage;

@@ -1,33 +1,56 @@
- import 'package:flutter/material.dart';
+import 'dart:math';
+
+import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:dating_ui_challenge/domain/providers/InfomatchCardProvider.dart';
-import 'package:dating_ui_challenge/foundations/spacing.dart';
-import 'package:dating_ui_challenge/ui/atoms/h1.dart';
-import 'package:dating_ui_challenge/ui/atoms/separated_box.dart';
-import 'package:dating_ui_challenge/ui/molecules/explore_people_card.dart';
-import 'package:dating_ui_challenge/ui/molecules/match_actions_row.dart';
-import 'package:dating_ui_challenge/utils/utils.dart';
+import '../../domain/providers/info_match_card_provider.dart';
+import '../../foundations/foundations.dart';
+import '../../utils/utils.dart';
+import '../atoms/atoms.dart';
+import '../molecules/molecules.dart';
 
-class InfoMatchCard extends StatelessWidget {
+class InfoMatchCard extends StatefulWidget {
   const InfoMatchCard({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => buildFrontCard(context);
+  State<InfoMatchCard> createState() => _InfoMatchCardState();
+}
 
-  Widget buildFrontCard(BuildContext context) => GestureDetector(
-        child: Builder(
-          builder: (context) {
+class _InfoMatchCardState extends State<InfoMatchCard> {
+  @override
+  void initState() {
+    super.initState();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final size = MediaQuery.of(context).size;
+
+      final provider = context.read<InfoMatchCardProvider>();
+      provider.setScreenSize(size);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) => buildDraggableCard(context);
+
+  Widget buildDraggableCard(BuildContext context) => GestureDetector(
+        child: LayoutBuilder(
+          builder: (context, constraints) {
             final provider = context.watch<InfoMatchCardProvider>();
             final position = provider.position;
             final isDragging = provider.isDragging;
-
             final milliseconds = isDragging ? 0 : 400;
+
+            final center = constraints.smallest.center(Offset.zero);
+            final angle = provider.angle * pi / 180;
+            final rotatedMix = Matrix4.identity()
+              ..translate(center.dx, center.dy)
+              ..rotateZ(angle)
+              ..translate(-center.dx, -center.dy);
+
             return AnimatedContainer(
                 curve: Curves.easeInOut,
                 duration: Duration(milliseconds: milliseconds),
-                transform: Matrix4.identity()
-                  ..translate(position.dx, position.dy),
+                transform: rotatedMix..translate(position.dx, position.dy),
                 child: buildCard());
           },
         ),

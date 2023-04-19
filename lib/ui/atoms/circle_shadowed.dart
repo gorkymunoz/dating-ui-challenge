@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:dating_ui_challenge/foundations/colors.dart';
+import '../../foundations/foundations.dart';
 
 class CircleShadowed extends StatelessWidget {
   final Widget children;

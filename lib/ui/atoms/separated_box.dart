@@ -1,5 +1,6 @@
-import 'package:dating_ui_challenge/foundations/sizes.dart';
 import 'package:flutter/material.dart';
+
+import '../../foundations/foundations.dart';
 
 class DatingSeparator extends StatelessWidget {
   final double nHeight;

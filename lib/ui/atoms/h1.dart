@@ -1,7 +1,6 @@
-import 'package:dating_ui_challenge/foundations/colors.dart';
 import 'package:flutter/material.dart';
 
-import 'package:dating_ui_challenge/foundations/sizes.dart';
+import '../../foundations/foundations.dart';
 
 class H1 extends StatelessWidget {
   final String text;

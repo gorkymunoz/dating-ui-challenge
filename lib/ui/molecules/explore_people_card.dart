@@ -1,8 +1,8 @@
-import 'package:dating_ui_challenge/foundations/spacing.dart';
-import 'package:dating_ui_challenge/ui/molecules/match_percentage.dart';
 import 'package:flutter/material.dart';
 
-import 'package:dating_ui_challenge/ui/atoms/asset_image.dart';
+import '../../foundations/foundations.dart';
+import '../atoms/atoms.dart';
+import 'molecules.dart';
 
 class ExplorePeopleCard extends StatelessWidget {
   const ExplorePeopleCard({Key? key}) : super(key: key);

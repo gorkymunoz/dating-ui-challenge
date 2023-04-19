@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:dating_ui_challenge/ui/atoms/circle_shadowed.dart';
+import 'atoms.dart';
 
 class CircleButtonGradientProperties {
   final List<Color> colors;

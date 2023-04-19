@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:dating_ui_challenge/domain/providers/InfomatchCardProvider.dart';
-import 'package:dating_ui_challenge/ui/organisms/info_match_card.dart';
+import 'domain/providers/info_match_card_provider.dart';
+import 'ui/organisms/organisms.dart';
+
 
 class DatingApp extends StatelessWidget {
   const DatingApp({super.key});

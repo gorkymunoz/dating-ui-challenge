@@ -1,9 +1,8 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 
-import 'package:dating_ui_challenge/foundations/colors.dart';
-import 'package:dating_ui_challenge/ui/atoms/circle_action_button.dart';
-import 'package:dating_ui_challenge/ui/atoms/circle_action_gradient_button.dart';
+import '../../foundations/foundations.dart';
+import '../atoms/atoms.dart';
 
 class MatchActions extends StatelessWidget {
   const MatchActions({
